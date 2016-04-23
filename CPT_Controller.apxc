@@ -1,0 +1,15 @@
+public class CPT_Controller {
+    public List<CPT_Code__c> CPT_Code_List {get;set;}
+
+	public CPT_Controller(){
+		popCodeList();
+	}
+	
+	private void popCodeList() {
+		CPT_Code_List = [SELECT CPTCode__c, CPTDescription__c FROM CPT_Code__c];
+	}
+	
+	public List<CPT_Code__c> getCPTCodes() {
+		return CPT_Code_List;
+	}
+}
