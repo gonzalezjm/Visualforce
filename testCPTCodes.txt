@@ -1,0 +1,10 @@
+78122	Blood volume																																			
+78130	Red cell survival study																																			
+78191	Platelet survival																																			
+78267	Breath tst attain/anal c-14																																			
+78268	Breath test analysis c-14																																			
+78270	Vit B-12 absorption exam																																			
+78271	Vit B-12 absrp exam int fac																																			
+78272	Vit B-12 absorp combined																																			
+78725	Kidney function study																																			
+G0027	Semen analysis 	
