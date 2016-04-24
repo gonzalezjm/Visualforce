@@ -1,0 +1,64 @@
+<apex:page controller="CPT_Controller" >
+    <apex:form style="border-style: solid;" id="page_form">
+        <br/>
+        <apex:outputText value="Enter service given to patient:" style="float:left;"></apex:outputText>
+        <apex:inputText id="first_service" style="float: left;margin-left: 20px;"></apex:inputText>
+        <apex:outputText value="Enter the first code:" style="float:left; margin-left: 20px;"></apex:outputText>
+        <apex:inputText id="first_code" style="float: left;margin-left: 41px; "></apex:inputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Enter service given to patient:" style="float:left;"></apex:outputText>
+        <apex:inputText id="second_service" style="float: left;margin-left: 20px;"></apex:inputText>
+        <apex:outputText value="Enter the second code:" style="float:left; margin-left: 20px;"></apex:outputText>
+        <apex:inputText id="second_code" style="float: left;margin-left: 20px;"></apex:inputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Enter service given to patient:" style="float:left;"></apex:outputText>
+        <apex:inputText id="third_service" style="float: left;margin-left: 20px;"></apex:inputText>
+        <apex:outputText value="Enter the third code:" style="float:left; margin-left: 20px;"></apex:outputText>
+        <apex:inputText id="third_code" style="float: left;margin-left: 38px;"></apex:inputText>
+        <br/>
+        <br/>
+        <apex:commandButton onClick="submitData()" value="Submit" id="submitButton"/>
+        <apex:commandButton onClick="clearData()" value="Clear" id="clearButton" style="margin-left:10px;"/>
+        <br/>
+  
+        <!--
+<apex:pageBlock title="CPT List" id="cptCode_list">
+
+
+<apex:pageBlockTable value="{! CPT_Code_List }" var="CPT">
+
+<apex:column value="{! CPT.CPTCode__c }"/>
+<apex:column value="{! CPT.CPTDescription__c }"/>
+
+
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+-->
+        
+        <script>
+        	function clearData(){
+                document.getElementById('{!$Component.page_form.first_service}').value = '';
+                document.getElementById('{!$Component.page_form.second_service}').value = '';
+                document.getElementById('{!$Component.page_form.third_service}').value = '';
+                document.getElementById('{!$Component.page_form.first_code}').value = '';
+                document.getElementById('{!$Component.page_form.second_code}').value = '';
+                document.getElementById('{!$Component.page_form.third_code}').value = '';
+            }
+        	function submitData(){
+                alert("Submit clicked");
+                
+            }
+        
+        </script>
+        
+        
+        
+        
+        
+        
+        
+    </apex:form>
+</apex:page>
