@@ -29,6 +29,7 @@
         <apex:outputText value="78272" style="float:left; margin-left: 20px;"></apex:outputText>
         <br/>
         <br/>
+        <apex:commandButton onClick="window.close()" value="Close" id="close" />
         
     </apex:form>
     

@@ -32,6 +32,8 @@
         <br/>
 -->
         <apex:commandButton onClick="revenueCheck()" value="Calculate Missed Revenue" id="missedRevenue"/>
+        <apex:commandButton onClick="window.close()" value="Close" id="close" style="margin-left:20px;"/>
+  
         <br/>
     </apex:form>
     
