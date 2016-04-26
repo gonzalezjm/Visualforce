@@ -1,0 +1,36 @@
+<apex:page >
+    
+    <apex:form style="border-style: solid;" id="page_form">
+        <br/>
+        <apex:outputText value="Recommended CPT Codes:" style="float:left; margin-left: 5px; font-weight:bold;"></apex:outputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Platelet survival           " style="float:left; margin-left: 5px;"></apex:outputText>
+        <apex:outputText value="78191" style="float:left; margin-left: 20px;"></apex:outputText>      
+        <br/>
+        <br/>
+        <apex:outputText value="Breath tst attain/anal c-14	" style="float:left; margin-left: 5px;"></apex:outputText>
+        <apex:outputText value="78267" style="float:left; margin-left: 20px;"></apex:outputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Breath test analysis c-14   " style="float:left; margin-left: 5px;"></apex:outputText> 
+        <apex:outputText value="78268" style="float:left; margin-left: 20px;"></apex:outputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Vit B-12 absorption exam    " style="float:left; margin-left: 5px;"></apex:outputText>
+        <apex:outputText value="78270" style="float:left; margin-left: 20px;"></apex:outputText>      
+        <br/>
+        <br/>
+        <apex:outputText value="Vit B-12 absrp exam int fac " style="float:left; margin-left: 5px;"></apex:outputText>
+        <apex:outputText value="78271" style="float:left; margin-left: 20px;"></apex:outputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Vit B-12 absorp combined    " style="float:left; margin-left: 5px;"></apex:outputText> 
+        <apex:outputText value="78272" style="float:left; margin-left: 20px;"></apex:outputText>
+        <br/>
+        <br/>
+        
+    </apex:form>
+    
+    
+</apex:page>

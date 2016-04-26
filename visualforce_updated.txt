@@ -1,0 +1,127 @@
+<apex:page controller="CPT_Controller" >
+    <apex:form style="border-style: solid;" id="page_form">
+        <br/>
+        <apex:outputText value="Enter service given to patient:" style="float:left;"></apex:outputText>
+        <apex:inputText id="first_service" style="float: left;margin-left: 20px;"></apex:inputText>
+        <apex:outputText value="Enter the first code:" style="float:left; margin-left: 20px;"></apex:outputText>
+        <apex:inputText id="first_code" style="float: left;margin-left: 41px; "></apex:inputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Enter service given to patient:" style="float:left;"></apex:outputText>
+        <apex:inputText id="second_service" style="float: left;margin-left: 20px;"></apex:inputText>
+        <apex:outputText value="Enter the second code:" style="float:left; margin-left: 20px;"></apex:outputText>
+        <apex:inputText id="second_code" style="float: left;margin-left: 20px;"></apex:inputText>
+        <br/>
+        <br/>
+        <apex:outputText value="Enter service given to patient:" style="float:left;"></apex:outputText>
+        <apex:inputText id="third_service" style="float: left;margin-left: 20px;"></apex:inputText>
+        <apex:outputText value="Enter the third code:" style="float:left; margin-left: 20px;"></apex:outputText>
+        <apex:inputText id="third_code" style="float: left;margin-left: 38px;"></apex:inputText>
+        <br/>
+        <br/>
+        <apex:commandButton onClick="submitData()" value="Submit" id="submitButton"/>
+        <apex:commandButton onClick="clearData()" value="Clear" id="clearButton" style="margin-left:10px;"/>
+        <br/>
+        
+        <!--
+<apex:pageBlock title="CPT List" id="cptCode_list">
+
+
+<apex:pageBlockTable value="{! CPT_Code_List }" var="CPT">
+
+<apex:column value="{! CPT.CPTCode__c }"/>
+<apex:column value="{! CPT.CPTDescription__c }"/>
+
+
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+-->
+        
+        <script>
+        function clearData(){
+            document.getElementById('{!$Component.page_form.first_service}').value = '';
+            document.getElementById('{!$Component.page_form.second_service}').value = '';
+            document.getElementById('{!$Component.page_form.third_service}').value = '';
+            document.getElementById('{!$Component.page_form.first_code}').value = '';
+            document.getElementById('{!$Component.page_form.second_code}').value = '';
+            document.getElementById('{!$Component.page_form.third_code}').value = '';
+        }
+        function submitData(){
+            
+            var firstService = document.getElementById('{!$Component.page_form.first_service}').value;
+            var secondService = document.getElementById('{!$Component.page_form.second_service}').value;
+            var thirdService = document.getElementById('{!$Component.page_form.third_service}').value;
+            
+            var firstCode = document.getElementById('{!$Component.page_form.first_code}').value;
+            var secondCode = document.getElementById('{!$Component.page_form.second_code}').value;
+            var thirdCode = document.getElementById('{!$Component.page_form.third_code}').value;
+            
+            var services = [firstService, secondService, thirdService];
+            var codes = [firstCode, secondCode, thirdCode];
+            
+            var validServices = ['blood volume', 'red cell survival study', 'platelet survival',
+                                 'breath tst attain/anal c-14', 'breath test analysis c-14',
+                                 'vit b-12 absorption exam', 'vit b-12 absrp exam int fac',
+                                 'vit b-12 absorp combined', 'kidney function study',
+                                 'semen analysis'];
+            
+            var validCodes =['78122','78130','78191',
+                             '78267','78268','78270',
+                             '78271','78272','78725','G0027'];
+            
+            var codeIndex;
+            var serviceIndex;
+            var success = true;
+            var empty = true;
+            
+            if(firstCode == '' && secondCode == '' && thirdCode == '' ||
+               firstService == '' && secondService == '' && thirdService == ''){
+                
+                success = false;
+                empty = true;
+                alert("You must insert at least one CPT code/service description.");
+                
+            } else {
+                empty = false;
+                for (i = 0; i < codes.length; i++) { 
+                    if(codes[i] != '' && services[i] != '') {
+                        codeIndex = validCodes.indexOf(codes[i]);
+                        serviceIndex = validServices.indexOf(services[i]);
+                        
+                        if (codeIndex == -1) {
+                            success = false;
+                            alert("There is an error in code #" + (i+1) + "!");
+                        } else if (serviceIndex == -1) {
+                            success = false;
+                            alert("There is an error in service #" + (i+1) + "!");
+                        }
+                    }
+                }
+            }
+            
+            if (success == true) {
+                alert("Submitted successfully");
+                window.open("/apex/CPT_PopUp");
+            } 
+            else if (success == false && empty == true){
+                alert("Unsuccessful submission, please try again.");
+            }
+            else {
+                alert("Unsuccessful submission, please try again.");
+                window.open("/apex/CPT_PopUp_Fail");
+            }
+        
+        
+        }
+        
+        </script>
+        
+        
+        
+        
+        
+        
+        
+    </apex:form>
+</apex:page>
