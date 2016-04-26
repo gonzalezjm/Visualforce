@@ -2,7 +2,7 @@
     
     <apex:form style="border-style: solid;" id="page_form">
         <br/>
-        <apex:outputText value="Recommended CPT Codes:" style="float:left; margin-left: 5px; font-weight:bold;"></apex:outputText>
+        <apex:outputText value="Services do not match with CPT Codes. Validation Unsuccessful. Recommended CPT Codes:" style="float:left; margin-left: 5px; font-weight:bold;"></apex:outputText>
         <br/>
         <br/>
         <apex:outputText value="Platelet survival           " style="float:left; margin-left: 5px;"></apex:outputText>

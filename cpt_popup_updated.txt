@@ -2,7 +2,7 @@
     
     <apex:form style="border-style: solid;" id="page_form">
         <br/>
-        <apex:outputText value="Success! Compliance check found no errors." style="float:left; margin-left: 5px; font-weight:bold;"></apex:outputText>
+        <apex:outputText value="Success! Services match with CPT Codes. Compliance check found no errors." style="float:left; margin-left: 5px; font-weight:bold;"></apex:outputText>
         <br/>
         <br/>
         <!--
