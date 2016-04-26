@@ -109,7 +109,7 @@
             }
             else {
                 alert("Unsuccessful submission, please try again.");
-                window.open("/apex/CPT_PopUp_Fail");
+                window.open("/apex/CPT_PopUp_Fail",'Popup','height=400,width=1000,left=100,top = 100,scrollbars=yes, toolbar=no,status=no');
             }
         
         
